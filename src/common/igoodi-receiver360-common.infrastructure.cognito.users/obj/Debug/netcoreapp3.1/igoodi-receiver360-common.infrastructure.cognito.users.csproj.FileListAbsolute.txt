@@ -1,0 +1,9 @@
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.AssemblyInfoInputs.cache
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.AssemblyInfo.cs
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.deps.json
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.dll
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.csprojAssemblyReference.cache
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.pdb
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.dll
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.pdb
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure.cognito.users\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.cognito.users.csproj.CoreCompileInputs.cache

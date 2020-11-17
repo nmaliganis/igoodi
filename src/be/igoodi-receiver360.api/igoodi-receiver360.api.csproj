@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>igoodi.receiver360.api</RootNamespace>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>81cd05f4-14e1-42c9-b4b4-472ae202b9bb</UserSecretsId>
+    <AssemblyName>igoodi-receiver360.api</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Messaging\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Messaging\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Messaging\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Messaging\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="0.Docs\readme.md~RF2ec404e.TMP" />
+    <None Remove="Controllers\API\Base\BaseController.cs~RF918f60c.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="0.Docs\readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreRateLimit" Version="3.0.5" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="FluentValidation" Version="9.2.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+    <PackageReference Include="GeoAPI" Version="1.7.5" />
+    <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
+    <PackageReference Include="Marvin.Cache.Headers" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="NHibernate" Version="5.3.2" />
+    <PackageReference Include="NHibernate.Caches.RtMemoryCache" Version="5.7.0" />
+    <PackageReference Include="NHibernate.Spatial" Version="5.3.0" />
+    <PackageReference Include="NHibernate.Spatial.PostGis" Version="5.3.0" />
+    <PackageReference Include="NHibernateProfiler" Version="5.0.5048" />
+    <PackageReference Include="Npgsql" Version="4.1.4" />
+    <PackageReference Include="Npgsql.Json.NET" Version="4.1.4" />
+    <PackageReference Include="Quartz" Version="3.1.0" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Enrichers.AspnetcoreHttpcontext" Version="1.1.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="1.0.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common-common.dtos\igoodi-receiver360-common.dtos.csproj" />
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common.infrastructure\igoodi-receiver360-common.infrastructure.csproj" />
+    <ProjectReference Include="..\igoodi-receiver360.contracts\igoodi-receiver360.contracts.csproj" />
+    <ProjectReference Include="..\igoodi-receiver360.model\igoodi-receiver360.model.csproj" />
+    <ProjectReference Include="..\igoodi-receiver360.services\igoodi-receiver360.services.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup> 
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+</Project>

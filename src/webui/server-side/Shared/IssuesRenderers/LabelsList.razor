@@ -1,0 +1,12 @@
+@using igoodi.receiver360.webui.Models
+@using igoodi.receiver360.webui.DataRetrieval
+
+@foreach (string lbl in CurrIssue.Labels)
+{
+	<span class="badge" style="background-color: @(LabelColors.GetColor(lbl)) ;">@lbl</span>
+}
+
+@code {
+	[Parameter]
+	public Issue CurrIssue { get; set; }
+}

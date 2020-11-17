@@ -1,0 +1,36 @@
+@page "/process"
+@using igoodi.receiver360.webui.Models.DTOs.Processes
+@inherits igoodi.receiver360.webui.Pages.ViewModels.ProcessViewModel
+
+<div class="tasks">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h3 class="card-header">Processes</h3>
+                <div class="card-body">
+                    <div class="row">
+                        <TelerikGrid Data="@ProcessState.Value.ProcessList"
+                                     Pageable="true"
+                                     PageSize="10"
+                                     Height="600px"
+                                     PageChanged="@PageChangedHandler"
+                                     Sortable="true"
+                                     SelectionMode="GridSelectionMode.Single"
+                                     SelectedItemsChanged="@((IEnumerable<ProcessDto> processList) => OnSelect(processList))"
+                                     SelectedItems="@SelectedItems"
+                                     Reorderable="true"
+                                     Resizable="true"
+                                     Groupable="false"
+                                     FilterMode="GridFilterMode.FilterRow">
+                            <GridColumns>
+                                <GridColumn Field="@(nameof(ProcessDto.Name))" Title="Process Name" Groupable="true" />
+                                <GridColumn Field="@(nameof(ProcessDto.Process))" Title="Process" Groupable="true" />
+                                <GridColumn Field="@(nameof(ProcessDto.Step))" Title="Step" Groupable="true" />
+                            </GridColumns>
+                        </TelerikGrid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

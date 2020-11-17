@@ -1,0 +1,47 @@
+﻿@page "/"
+@using igoodi.receiver360.webui
+@namespace igoodi.receiver360.webui.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLQL39J');</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>igoodi receiver360 - Admin Panel</title>
+    <base href="~/" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/@@progress/kendo-theme-default@@latest/dist/all.css" />
+    <link href="https://unpkg.com/@@progress/kendo-theme-material@@latest/dist/all.css" rel="stylesheet" />
+</head>
+<body>
+	<app id="app" class="app container-fluid"><component type="typeof(App)" render-mode="ServerPrerendered" /></app>
+
+<div id="blazor-error-ui" class="alert alert-warning">
+    <environment include="Staging,Production">
+        An error has occurred. This application may no longer respond until reloaded.
+    </environment>
+    <environment include="Development">
+        An unhandled exception has occurred. See browser dev tools for details.
+    </environment>
+    <div class="pt-3">
+        <a href class="reload k-button">Reload</a>
+    </div>
+</div>
+
+    <script src="_content/Fluxor.Blazor.Web/scripts/index.js"></script>
+	<script src="_framework/blazor.server.js"></script>
+</body>
+</html>

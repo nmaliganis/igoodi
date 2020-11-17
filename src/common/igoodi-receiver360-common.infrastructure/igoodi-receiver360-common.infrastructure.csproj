@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>igoodi-receiver360-common.infrastructure</AssemblyName>
+    <RootNamespace>igoodi.receiver360.common.infrastructure</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\Api\**" />
+    <EmbeddedResource Remove="Exceptions\Api\**" />
+    <None Remove="Exceptions\Api\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Domain\Events\IDomainEventHandlerFactory.cs~RF4339b49.TMP" />
+    <None Remove="Domain\IReadOnlyRepository.cs~RF434342d.TMP" />
+    <None Remove="Domain\IReadOnlyRepository.cs~RF434d714.TMP" />
+    <None Remove="Domain\IVersionedEntity.cs~RF4358287.TMP" />
+    <None Remove="Helpers\Security\HashHelper.cs~RF10146637.TMP" />
+    <None Remove="TypeMappings\AutoMapperAdapter.cs~RF43b4225.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\Controllers\" />
+    <Folder Include="Helpers\Serializers\" />
+  </ItemGroup>
+</Project>

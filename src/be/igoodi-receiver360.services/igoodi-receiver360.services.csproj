@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>igoodi-receiver360.services</AssemblyName>
+    <RootNamespace>igoodi.receiver360.services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="V1\UsersControllerDependencyBlock.cs~RF38d88c2.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\igoodi-receiver360.contracts\igoodi-receiver360.contracts.csproj" />
+    <ProjectReference Include="..\igoodi-receiver360.repository\igoodi-receiver360.repository.csproj" />
+  </ItemGroup>
+
+</Project>

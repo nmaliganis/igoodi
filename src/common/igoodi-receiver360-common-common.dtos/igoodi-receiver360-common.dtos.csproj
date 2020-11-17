@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>igoodi-receiver360-common.dtos</AssemblyName>
+    <RootNamespace>igoodi.receiver360.common.dtos</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Vms\Assets\CategoryForCreationUiModel.cs~RF4f0e3d4.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+  </ItemGroup>
+
+</Project>

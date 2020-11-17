@@ -1,0 +1,98 @@
+@inherits LayoutComponentBase
+@inject Microsoft.AspNetCore.Components.NavigationManager navigationManager
+
+<TelerikRootComponent>
+	<div class="row">
+		<div id="top-bar" class="top-bar col-xs-12 bg-dark d-md-none"></div>
+		@if (IsNavAllowed())
+		{
+    <div id="nav"
+         class="col-xs-3 bg-dark text-white py-5 k-vbox @( expandNavMenu ? "expand" : "" )">
+        <span id="nav-toggle" class="nav-toggle d-md-none" @onclick="@ToggleNavMenu">
+            <span class="k-icon k-i-hamburger"></span>
+        </span>
+        <h1 id="app-title">IGOODI</h1>
+        <p id="app-subtitle">igoodi-receiver360</p>
+        <hr />
+        <p class="h4 mt-5">Project</p>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" id="reconstruction">
+                <NavLink class="nav-link" href="reconstruction">Reconstruction</NavLink>
+            </li>
+            <li class="nav-item" id="retexturing">
+                <NavLink class="nav-link" href="retexturing">Retexturing</NavLink>
+            </li>
+            <li class="nav-item" id="processes">
+                <NavLink class="nav-link" href="maya">Maya</NavLink>
+            </li>
+        </ul>
+        
+        @*<p class="h4 mt-5">Process</p>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" id="processes">
+                <NavLink class="nav-link" href="process">Processes</NavLink>
+            </li>
+        </ul>*@
+
+        <p class="h4 mt-5">Account</p>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" id="signin">
+                <NavLink class="nav-link" href="signin">Sign Out</NavLink>
+            </li>
+        </ul>
+        <hr class="py-5" />
+        <div id="copy">
+            <p>
+                Copyright
+                &copy;
+                @DateTime.Now.Year,<br /><a href="https://www.igoodi.eu/">IGOODI</a> The Digital You!
+            </p>
+            <p>All Rights Reserved.</p>
+        </div>
+    </div>
+		}
+		<main class="col-xs p-4 py-5">
+			@Body
+		</main>
+	</div>
+</TelerikRootComponent>
+
+@code {
+	bool expandNavMenu = false;
+
+       void ToggleNavMenu()
+       {
+           expandNavMenu = !expandNavMenu;
+       }
+
+       bool IsNavAllowed()
+       {
+           string currUrl = navigationManager.Uri;
+           if (currUrl.EndsWith("signin"))
+           {
+               return false;
+           }
+           return true;
+       }
+
+       bool IsAtRoot()
+       {
+           string currUrl = navigationManager.Uri;
+           if (currUrl.EndsWith("/") || currUrl.EndsWith("/dashboard"))
+           {
+               return true;
+           }
+           return false;
+       }
+
+       protected override void OnInitialized()
+       {
+           navigationManager.LocationChanged += OnLocationChanges;
+       }
+
+       private void OnLocationChanges(object sender, LocationChangedEventArgs args)
+       {
+           expandNavMenu = false;
+           StateHasChanged();
+       }
+}

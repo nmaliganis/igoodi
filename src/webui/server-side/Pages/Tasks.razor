@@ -1,0 +1,48 @@
+@page "/tasks"
+@using igoodi.receiver360.webui.Models.DTOs.Tasks
+@inherits igoodi.receiver360.webui.Pages.ViewModels.TasksViewModel
+
+    <div class="tasks">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <h3 class="card-header">Actions for Tasks</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <TelerikButton Primary="true" OnClick="@FetchTasksWasClicked">Fetch Tasks</TelerikButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <h3 class="card-header">Tasks</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <TelerikGrid Data="@TaskState.Value.TaskList"
+                                         Pageable="true"
+                                         PageSize="10"
+                                         Height="500px"
+                                         PageChanged="@PageChangedHandler"
+                                         Sortable="true"
+                                         SelectionMode="GridSelectionMode.Single"
+                                         SelectedItemsChanged="@((IEnumerable<TaskItemDto> taskList) => OnSelect(taskList))"
+                                         SelectedItems="@SelectedItems"
+                                         Reorderable="true"
+                                         Resizable="true"
+                                         Groupable="true"
+                                         FilterMode="GridFilterMode.FilterRow">
+                                <GridColumns>
+                                    <GridColumn Field="@(nameof(TaskItemDto.Id))" Title="ID" Width="120px" Groupable="false" />
+                                     <GridColumn Field="@(nameof(TaskItemDto.Voucher))" Title="Task Voucher" Groupable="true" /> 
+                                     <GridColumn Field="@(nameof(TaskItemDto.Type))" Title="ScanType" Groupable="true" /> 
+                                </GridColumns>
+                            </TelerikGrid>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>igoodi.receiver360.webui</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json~RF8ef673.TMP" />
+    <None Remove="Commanding\Listeners\IScannedDetectionActionListener.cs~RF85a8cc.TMP" />
+    <None Remove="Models\DTOs\Folders\FolderDto.cs~RF759590.TMP" />
+    <None Remove="Pages\Videos.razor~RFac99332.TMP" />
+    <None Remove="Services\Contracts\IIGoodiService.cs~RF96867e1.TMP" />
+    <None Remove="Store\Folders\Actions\FetchAllFolders\FetchFolderListSuccessAction.cs~RF78c28d.TMP" />
+    <None Remove="Store\Folders\FolderFeature.cs~RF772d95.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="3.0.0" />
+    <PackageReference Include="Blazored.Toast" Version="3.1.2" />
+    <PackageReference Include="Fluxor" Version="3.8.0" />
+    <PackageReference Include="Fluxor.Blazor.Web" Version="3.8.0" />
+    <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="3.8.0" />
+    <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Quartz" Version="3.2.3" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Enrichers.AspnetcoreHttpcontext" Version="1.1.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="1.0.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="Telerik.UI.for.Blazor" Version="2.17.0" />
+    <PackageReference Include="Westwind.AspnetCore.LiveReload" Version="0.2.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common.infrastructure.cognito.users\igoodi-receiver360-common.infrastructure.cognito.users.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>igoodi-receiver360.contracts</AssemblyName>
+    <RootNamespace>igoodi.receiver360.contracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="V1\ICategoriesControllerDependencyBlock.cs~RF4daec0c.TMP" />
+    <None Remove="V1\IContainersControllerDependencyBlock.cs~RF975cd33.TMP" />
+    <None Remove="V1\ICustomersControllerDependencyBlock.cs~RF9a88f57.TMP" />
+    <None Remove="V1\ICustomersControllerDependencyBlock.cs~RFef4cece.TMP" />
+    <None Remove="V1\IStoresControllerDependencyBlock.cs~RF6bda283.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common-common.dtos\igoodi-receiver360-common.dtos.csproj" />
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common.infrastructure\igoodi-receiver360-common.infrastructure.csproj" />
+    <ProjectReference Include="..\igoodi-receiver360.model\igoodi-receiver360.model.csproj" />
+  </ItemGroup>
+
+</Project>

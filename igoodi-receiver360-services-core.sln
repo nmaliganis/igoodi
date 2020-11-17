@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{FAE8B85B-7A38-49FE-BAC2-52A65BAAC5CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "be", "be", "{14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebUi", "WebUi", "{CBC3B9D5-04F6-4960-8C31-29CA7B948983}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.webui", "src\webui\server-side\igoodi-receiver360.webui.csproj", "{7F2B470F-0DB2-443D-9BEF-9052498716D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360-common.dtos", "src\common\igoodi-receiver360-common-common.dtos\igoodi-receiver360-common.dtos.csproj", "{2B52ACF5-0086-42E7-9A06-E0B35AE6B123}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360-common.infrastructure", "src\common\igoodi-receiver360-common.infrastructure\igoodi-receiver360-common.infrastructure.csproj", "{59F31417-28D8-4E41-9832-0493E276E09E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.api", "src\be\igoodi-receiver360.api\igoodi-receiver360.api.csproj", "{3FA20363-3077-4928-A083-60B0B4C6EFDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.model", "src\be\igoodi-receiver360.model\igoodi-receiver360.model.csproj", "{2110F177-AB3D-4609-AFD3-786B3A6C146D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.contracts", "src\be\igoodi-receiver360.contracts\igoodi-receiver360.contracts.csproj", "{758B192B-2778-4C1E-8445-533401270E52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.services", "src\be\igoodi-receiver360.services\igoodi-receiver360.services.csproj", "{AC6B8817-0591-4CA9-BE57-3FF713E38317}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360.repository", "src\be\igoodi-receiver360.repository\igoodi-receiver360.repository.csproj", "{CB664613-67F0-4171-8224-6D01F03E1E33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "igoodi-receiver360-common.infrastructure.cognito.users", "src\common\igoodi-receiver360-common.infrastructure.cognito.users\igoodi-receiver360-common.infrastructure.cognito.users.csproj", "{61B239FE-A565-456F-A253-D0501C4F5A10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F2B470F-0DB2-443D-9BEF-9052498716D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2B470F-0DB2-443D-9BEF-9052498716D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2B470F-0DB2-443D-9BEF-9052498716D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2B470F-0DB2-443D-9BEF-9052498716D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B52ACF5-0086-42E7-9A06-E0B35AE6B123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B52ACF5-0086-42E7-9A06-E0B35AE6B123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B52ACF5-0086-42E7-9A06-E0B35AE6B123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B52ACF5-0086-42E7-9A06-E0B35AE6B123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F31417-28D8-4E41-9832-0493E276E09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F31417-28D8-4E41-9832-0493E276E09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F31417-28D8-4E41-9832-0493E276E09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F31417-28D8-4E41-9832-0493E276E09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA20363-3077-4928-A083-60B0B4C6EFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA20363-3077-4928-A083-60B0B4C6EFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA20363-3077-4928-A083-60B0B4C6EFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA20363-3077-4928-A083-60B0B4C6EFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2110F177-AB3D-4609-AFD3-786B3A6C146D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2110F177-AB3D-4609-AFD3-786B3A6C146D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2110F177-AB3D-4609-AFD3-786B3A6C146D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2110F177-AB3D-4609-AFD3-786B3A6C146D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758B192B-2778-4C1E-8445-533401270E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758B192B-2778-4C1E-8445-533401270E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758B192B-2778-4C1E-8445-533401270E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758B192B-2778-4C1E-8445-533401270E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6B8817-0591-4CA9-BE57-3FF713E38317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6B8817-0591-4CA9-BE57-3FF713E38317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6B8817-0591-4CA9-BE57-3FF713E38317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6B8817-0591-4CA9-BE57-3FF713E38317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB664613-67F0-4171-8224-6D01F03E1E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB664613-67F0-4171-8224-6D01F03E1E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB664613-67F0-4171-8224-6D01F03E1E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB664613-67F0-4171-8224-6D01F03E1E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B239FE-A565-456F-A253-D0501C4F5A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B239FE-A565-456F-A253-D0501C4F5A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B239FE-A565-456F-A253-D0501C4F5A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B239FE-A565-456F-A253-D0501C4F5A10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F2B470F-0DB2-443D-9BEF-9052498716D8} = {CBC3B9D5-04F6-4960-8C31-29CA7B948983}
+		{2B52ACF5-0086-42E7-9A06-E0B35AE6B123} = {FAE8B85B-7A38-49FE-BAC2-52A65BAAC5CD}
+		{59F31417-28D8-4E41-9832-0493E276E09E} = {FAE8B85B-7A38-49FE-BAC2-52A65BAAC5CD}
+		{3FA20363-3077-4928-A083-60B0B4C6EFDD} = {14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}
+		{2110F177-AB3D-4609-AFD3-786B3A6C146D} = {14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}
+		{758B192B-2778-4C1E-8445-533401270E52} = {14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}
+		{AC6B8817-0591-4CA9-BE57-3FF713E38317} = {14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}
+		{CB664613-67F0-4171-8224-6D01F03E1E33} = {14E5ADE2-1753-4E19-9015-AEC6B8DB8C1F}
+		{61B239FE-A565-456F-A253-D0501C4F5A10} = {FAE8B85B-7A38-49FE-BAC2-52A65BAAC5CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42AD2CBB-7113-4833-BA07-3544FCB20989}
+	EndGlobalSection
+EndGlobal

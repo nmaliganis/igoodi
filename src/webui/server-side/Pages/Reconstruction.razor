@@ -1,0 +1,67 @@
+@page "/"
+@page "/reconstruction"
+@using igoodi.receiver360.webui.Models.DTOs.Folders
+@inherits igoodi.receiver360.webui.Pages.ViewModels.ReconstructionViewModel
+
+<div class="tasks">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h3 class="card-header">Re-Construction</h3>
+                <div class="card-body">
+                    <div class="row">
+                        <TelerikGrid Data="@FolderState.Value.ReconstructionFolderList"
+                                     Pageable="true"
+                                     PageSize="10"
+                                     Height="600px"
+                                     PageChanged="@PageChangedHandler"
+                                     Sortable="true"
+                                     SelectionMode="GridSelectionMode.Single"
+                                     SelectedItemsChanged="@((IEnumerable<FolderDto> folderList) => OnSelect(folderList))"
+                                     SelectedItems="@SelectedItems"
+                                     Reorderable="true"
+                                     Resizable="true"
+                                     Groupable="false"
+                                     FilterMode="GridFilterMode.FilterRow">
+                            <GridColumns>
+                                <GridColumn Field="@(nameof(FolderDto.Name))" Title="Name - Voucher" Groupable="true" />
+                                <GridColumn Field="@(nameof(FolderDto.Type))" Title="Step" Groupable="true" />
+                            </GridColumns>
+                        </TelerikGrid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h3 class="card-header">Failures</h3>
+                <div class="card-body">
+                    <div class="row">
+                        <TelerikGrid Data="@FolderState.Value.FailedFolderList"
+                                     Pageable="true"
+                                     PageSize="10"
+                                     Height="600px"
+                                     PageChanged="@PageChangedHandler"
+                                     Sortable="true"
+                                     SelectionMode="GridSelectionMode.Single"
+                                     SelectedItemsChanged="@((IEnumerable<FolderDto> folderList) => OnSelect(folderList))"
+                                     SelectedItems="@SelectedItems"
+                                     Reorderable="true"
+                                     Resizable="true"
+                                     Groupable="false"
+                                     FilterMode="GridFilterMode.FilterRow">
+                            <GridColumns>
+                                <GridColumn Field="@(nameof(FolderDto.Name))" Title="Name - Voucher" Groupable="true" />
+                                <GridColumn Field="@(nameof(FolderDto.Type))" Title="Step" Groupable="true" />
+                                <GridColumn Field="@(nameof(FolderDto.IsFailed))" Title="Failed" Groupable="true" />
+                            </GridColumns>
+                        </TelerikGrid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</div>

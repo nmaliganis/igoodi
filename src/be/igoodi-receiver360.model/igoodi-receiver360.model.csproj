@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>igoodi-receiver360.model</AssemblyName>
+    <RootNamespace>igoodi.receiver360.model</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="1.15.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\igoodi-receiver360-common.infrastructure\igoodi-receiver360-common.infrastructure.csproj" />
+  </ItemGroup>
+</Project>

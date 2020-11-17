@@ -1,0 +1,17 @@
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.AssemblyInfoInputs.cache
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.AssemblyInfo.cs
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.csproj.CoreCompileInputs.cache
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.deps.json
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.dll
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.pdb
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.dll
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.pdb
+C:\dev\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.csprojAssemblyReference.cache
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.deps.json
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.dll
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\bin\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.pdb
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.AssemblyInfoInputs.cache
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.AssemblyInfo.cs
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.dll
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.pdb
+E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\common\igoodi-receiver360-common.infrastructure\obj\Debug\netcoreapp3.1\igoodi-receiver360-common.infrastructure.csprojAssemblyReference.cache

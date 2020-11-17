@@ -1,0 +1,509 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.services\\igoodi-receiver360.services.csproj": {}
+  },
+  "projects": {
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\igoodi-receiver360.contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\igoodi-receiver360.contracts.csproj",
+        "projectName": "igoodi-receiver360.contracts",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\igoodi-receiver360.contracts.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj"
+              },
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\igoodi-receiver360-common.dtos.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\igoodi-receiver360-common.dtos.csproj"
+              },
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj",
+        "projectName": "igoodi-receiver360.model",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "NetTopologySuite.IO.GeoJSON": {
+              "target": "Package",
+              "version": "[1.15.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\igoodi-receiver360.repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\igoodi-receiver360.repository.csproj",
+        "projectName": "igoodi-receiver360.repository",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\igoodi-receiver360.repository.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.model\\igoodi-receiver360.model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentNHibernate": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.3.2, )"
+            },
+            "NHibernate.Spatial.PostGis": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
+            "Npgsql.Json.NET": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "nhibernate.postgresql.json": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.services\\igoodi-receiver360.services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.services\\igoodi-receiver360.services.csproj",
+        "projectName": "igoodi-receiver360.services",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.services\\igoodi-receiver360.services.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\igoodi-receiver360.contracts.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.contracts\\igoodi-receiver360.contracts.csproj"
+              },
+              "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\igoodi-receiver360.repository.csproj": {
+                "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\be\\igoodi-receiver360.repository\\igoodi-receiver360.repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\igoodi-receiver360-common.dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\igoodi-receiver360-common.dtos.csproj",
+        "projectName": "igoodi-receiver360-common.dtos",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\igoodi-receiver360-common.dtos.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common-common.dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj",
+        "projectName": "igoodi-receiver360-common.infrastructure",
+        "projectPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\igoodi-receiver360-common.infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Venus\\.nuget\\packages\\",
+        "outputPath": "E:\\1.Projects\\igoodi\\Working\\igoodi-receiver-360\\src\\common\\igoodi-receiver360-common.infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Venus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.15.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\dpl": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for Blazor 2.17.0\\packages": {},
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\blazor\\18.1.0.42\\NuGetPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.1.20155.7\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
