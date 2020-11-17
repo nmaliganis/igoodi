@@ -186,13 +186,16 @@ namespace igoodi.receiver360.webui.Services.Impls
       {
         if (file.Value.Count > 2)
         {
-          returnValue.Add(new FolderDto()
+          if(file.Value.Any(x => x.EndsWith(".zip.fail")))
           {
-            DateCreated = DateTime.Now,
-            Name = file.Key,
-            IsFailed = true,
-            Type = step.ToString()
-          });
+            returnValue.Add(new FolderDto()
+            {
+              DateCreated = DateTime.Now,
+              Name = file.Key,
+              IsFailed = true,
+              Type = step.ToString()
+            });
+          }
         }
       }
 

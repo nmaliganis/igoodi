@@ -127,3 +127,142 @@
 2020-11-17 10:51:00.325 +01:00 [Information] Sending HTTP request "POST" https://hooks.slack.com/services/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
 2020-11-17 10:51:00.576 +01:00 [Information] Received HTTP response after 250.135ms - OK
 2020-11-17 10:51:00.578 +01:00 [Information] End processing HTTP request after 253.7092ms - OK
+2020-11-17 12:12:33.797 +01:00 [Information] User profile is available. Using '"C:\Users\Venus\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-17 12:12:34.161 +01:00 [Information] Default Quartz.NET properties loaded from embedded resource file
+2020-11-17 12:12:34.274 +01:00 [Information] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-11-17 12:12:34.277 +01:00 [Information] Quartz Scheduler v."3.2.3.0" created.
+2020-11-17 12:12:34.284 +01:00 [Information] RAMJobStore initialized.
+2020-11-17 12:12:34.290 +01:00 [Information] Scheduler meta-data: Quartz Scheduler (v3.2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-11-17 12:12:34.292 +01:00 [Information] Quartz scheduler 'DefaultQuartzScheduler' initialized
+2020-11-17 12:12:34.297 +01:00 [Information] Quartz scheduler version: 3.2.3.0
+2020-11-17 12:12:34.299 +01:00 [Information] JobFactory set to: igoodi.receiver360.webui.Schedulers.JobFactory
+2020-11-17 12:12:34.357 +01:00 [Information] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-11-17 12:12:34.626 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-17 12:12:34.627 +01:00 [Information] Hosting environment: "Development"
+2020-11-17 12:12:34.628 +01:00 [Information] Content root path: "E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\webui\server-side"
+2020-11-17 12:12:34.668 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/  
+2020-11-17 12:12:34.690 +01:00 [Warning] Failed to determine the https port for redirect.
+2020-11-17 12:12:34.763 +01:00 [Information] Executing endpoint '"/_Host"'
+2020-11-17 12:12:34.804 +01:00 [Information] Route matched with "{page = \"/_Host\"}". Executing page "/_Host"
+2020-11-17 12:12:34.829 +01:00 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-17 12:12:34.831 +01:00 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-17 12:12:35.575 +01:00 [Information] Executed page "/_Host" in 759.619ms
+2020-11-17 12:12:35.578 +01:00 [Information] Executed endpoint '"/_Host"'
+2020-11-17 12:12:35.583 +01:00 [Information] Request finished in 919.5059ms 200 text/html; charset=utf-8
+2020-11-17 12:12:35.636 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/css/styles.css  
+2020-11-17 12:12:35.650 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_content/Telerik.UI.for.Blazor/js/telerik-blazor.js  
+2020-11-17 12:12:35.655 +01:00 [Information] The file "/_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" was not modified
+2020-11-17 12:12:35.655 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_content/Fluxor.Blazor.Web/scripts/index.js  
+2020-11-17 12:12:35.664 +01:00 [Information] The file "/_content/Fluxor.Blazor.Web/scripts/index.js" was not modified
+2020-11-17 12:12:35.664 +01:00 [Information] Request finished in 14.5079ms 304 application/javascript
+2020-11-17 12:12:35.667 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_framework/blazor.server.js  
+2020-11-17 12:12:35.675 +01:00 [Information] The file "/_framework/blazor.server.js" was not modified
+2020-11-17 12:12:35.684 +01:00 [Information] Request finished in 29.4926ms 304 application/javascript
+2020-11-17 12:12:35.703 +01:00 [Information] Request finished in 35.586ms 304 application/javascript
+2020-11-17 12:12:35.724 +01:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\webui\server-side\wwwroot\css\styles.css"'
+2020-11-17 12:12:35.726 +01:00 [Information] Request finished in 89.7958ms 200 text/css
+2020-11-17 12:12:35.881 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:3800/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2020-11-17 12:12:35.894 +01:00 [Information] Executing endpoint '"/_blazor/negotiate"'
+2020-11-17 12:12:35.907 +01:00 [Information] Executed endpoint '"/_blazor/negotiate"'
+2020-11-17 12:12:35.909 +01:00 [Information] Request finished in 28.3316ms 200 application/json
+2020-11-17 12:12:36.316 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_blazor?id=3afitzDboEBkP_M94rsc1Q  
+2020-11-17 12:12:36.334 +01:00 [Information] Executing endpoint '"/_blazor"'
+2020-11-17 12:12:37.004 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:12:37.008 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:13:07.733 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:13:17.313 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:3800/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2020-11-17 12:13:25.410 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:13:25.414 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:13:25.422 +01:00 [Information] Executing endpoint '"/_blazor/negotiate"'
+2020-11-17 12:13:25.426 +01:00 [Information] Executed endpoint '"/_blazor/negotiate"'
+2020-11-17 12:13:25.428 +01:00 [Information] Request finished in 9304.5086ms 200 application/json
+2020-11-17 12:13:25.471 +01:00 [Information] Executed endpoint '"/_blazor"'
+2020-11-17 12:13:25.473 +01:00 [Information] Request finished in 49157.5502ms 101 
+2020-11-17 12:13:25.734 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_blazor?id=feXgVKbi8TWJpFmtOeK0Uw  
+2020-11-17 12:13:25.748 +01:00 [Information] Executing endpoint '"/_blazor"'
+2020-11-17 12:13:30.004 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:20:52.613 +01:00 [Information] User profile is available. Using '"C:\Users\Venus\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-17 12:20:52.897 +01:00 [Information] Default Quartz.NET properties loaded from embedded resource file
+2020-11-17 12:20:52.995 +01:00 [Information] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-11-17 12:20:52.998 +01:00 [Information] Quartz Scheduler v."3.2.3.0" created.
+2020-11-17 12:20:53.013 +01:00 [Information] RAMJobStore initialized.
+2020-11-17 12:20:53.016 +01:00 [Information] Scheduler meta-data: Quartz Scheduler (v3.2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-11-17 12:20:53.017 +01:00 [Information] Quartz scheduler 'DefaultQuartzScheduler' initialized
+2020-11-17 12:20:53.020 +01:00 [Information] Quartz scheduler version: 3.2.3.0
+2020-11-17 12:20:53.022 +01:00 [Information] JobFactory set to: igoodi.receiver360.webui.Schedulers.JobFactory
+2020-11-17 12:20:53.068 +01:00 [Information] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-11-17 12:20:53.320 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-17 12:20:53.322 +01:00 [Information] Hosting environment: "Development"
+2020-11-17 12:20:53.323 +01:00 [Information] Content root path: "E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\webui\server-side"
+2020-11-17 12:20:53.357 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/  
+2020-11-17 12:20:53.379 +01:00 [Warning] Failed to determine the https port for redirect.
+2020-11-17 12:20:53.443 +01:00 [Information] Executing endpoint '"/_Host"'
+2020-11-17 12:20:53.480 +01:00 [Information] Route matched with "{page = \"/_Host\"}". Executing page "/_Host"
+2020-11-17 12:20:53.513 +01:00 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-17 12:20:53.514 +01:00 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-17 12:20:54.244 +01:00 [Information] Executed page "/_Host" in 749.8005ms
+2020-11-17 12:20:54.246 +01:00 [Information] Executed endpoint '"/_Host"'
+2020-11-17 12:20:54.256 +01:00 [Information] Request finished in 904.2333ms 200 text/html; charset=utf-8
+2020-11-17 12:20:54.301 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/css/styles.css  
+2020-11-17 12:20:54.308 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_content/Fluxor.Blazor.Web/scripts/index.js  
+2020-11-17 12:20:54.308 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_content/Telerik.UI.for.Blazor/js/telerik-blazor.js  
+2020-11-17 12:20:54.320 +01:00 [Information] The file "/_content/Fluxor.Blazor.Web/scripts/index.js" was not modified
+2020-11-17 12:20:54.320 +01:00 [Information] The file "/_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" was not modified
+2020-11-17 12:20:54.330 +01:00 [Information] Request finished in 21.7273ms 304 application/javascript
+2020-11-17 12:20:54.330 +01:00 [Information] Request finished in 21.6109ms 304 application/javascript
+2020-11-17 12:20:54.362 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_framework/blazor.server.js  
+2020-11-17 12:20:54.364 +01:00 [Information] The file "/_framework/blazor.server.js" was not modified
+2020-11-17 12:20:54.367 +01:00 [Information] Request finished in 5.2454ms 304 application/javascript
+2020-11-17 12:20:54.404 +01:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"E:\1.Projects\igoodi\Working\igoodi-receiver-360\src\webui\server-side\wwwroot\css\styles.css"'
+2020-11-17 12:20:54.406 +01:00 [Information] Request finished in 105.4723ms 200 text/css
+2020-11-17 12:20:54.558 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:3800/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2020-11-17 12:20:54.568 +01:00 [Information] Executing endpoint '"/_blazor/negotiate"'
+2020-11-17 12:20:54.582 +01:00 [Information] Executed endpoint '"/_blazor/negotiate"'
+2020-11-17 12:20:54.584 +01:00 [Information] Request finished in 25.5811ms 200 application/json
+2020-11-17 12:20:54.979 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_blazor?id=fT_2wXEjf5XmaQulaUUJCg  
+2020-11-17 12:20:54.991 +01:00 [Information] Executing endpoint '"/_blazor"'
+2020-11-17 12:20:55.609 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:20:55.613 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:22:14.000 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:3800/_blazor/negotiate?negotiateVersion=1 text/plain;charset=UTF-8 0
+2020-11-17 12:22:31.814 +01:00 [Information] Executing endpoint '"/_blazor/negotiate"'
+2020-11-17 12:22:31.823 +01:00 [Information] Executed endpoint '"/_blazor/negotiate"'
+2020-11-17 12:22:31.824 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:22:31.827 +01:00 [Information] Request finished in 17865.2614ms 200 application/json
+2020-11-17 12:22:32.130 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:3800/_blazor?id=YqP7tMqPY55XB3kpt6oC7A  
+2020-11-17 12:22:32.143 +01:00 [Information] Executing endpoint '"/_blazor"'
+2020-11-17 12:22:32.155 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:22:53.754 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:22:53.784 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:23:11.517 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:23:11.543 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:23:24.412 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:23:24.481 +01:00 [Information] Executed endpoint '"/_blazor"'
+2020-11-17 12:23:24.495 +01:00 [Information] Request finished in 149516.7232ms 101 
+2020-11-17 12:23:30.004 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:23:30.006 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:24:00.008 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:24:00.011 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:24:30.008 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:24:30.010 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:25:00.004 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:25:00.009 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:25:30.005 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:25:30.007 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:26:00.008 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:26:00.012 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:26:30.005 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
+2020-11-17 12:26:30.007 +01:00 [Information] GetFolderList:--FolderService--  @AboutComplete@ Message: Just Before GetFolderList
