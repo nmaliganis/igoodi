@@ -12,6 +12,8 @@ namespace igoodi.receiver360.webui.Store.Folders.Reducers.FetchAllFolders.Retext
         state.FailedFolderList,
         state.ReconstructionFolderList,
         action.FolderList,
+        state.MayaFolderList,
+        state.UnityFolderList,
         "",
         state.IsLoading,
         state.Folder

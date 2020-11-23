@@ -31,12 +31,26 @@ namespace igoodi.receiver360.webui.Store.Process.Effects.CreateProcess
           if(processRec != null)
             dispatcher.Dispatch(new CreateProcessSuccessAction(processRec));
         }
-        if (action.Step == ProcessStep.Retexturing)
+        else if (action.Step == ProcessStep.Retexturing)
         {
           var processTex =
             await FolderDataService.ProcessRetexturingScanFolder(action.Name, action.CurrentProcess.ToString());
           if(processTex != null)
             dispatcher.Dispatch(new CreateProcessSuccessAction(processTex));
+        }
+        else if (action.Step == ProcessStep.Maya)
+        {
+          var processMay =
+            await FolderDataService.ProcessMayaScanFolder(action.Name, action.CurrentProcess.ToString());
+          if(processMay != null)
+            dispatcher.Dispatch(new CreateProcessSuccessAction(processMay));
+        }
+        else if (action.Step == ProcessStep.Unity)
+        {
+          var processUnt =
+            await FolderDataService.ProcessUnityScanFolder(action.Name, action.CurrentProcess.ToString());
+          if(processUnt != null)
+            dispatcher.Dispatch(new CreateProcessSuccessAction(processUnt));
         }
       }
       catch (Exception e)

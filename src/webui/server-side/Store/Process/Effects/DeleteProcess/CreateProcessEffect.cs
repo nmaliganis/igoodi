@@ -26,10 +26,20 @@ namespace igoodi.receiver360.webui.Store.Process.Effects.DeleteProcess
             await FolderDataService.ProcessReconstructionDelete(action.Name);
             dispatcher.Dispatch(new DeleteProcessSuccessAction(action.Name));
         }
-        if (action.Step == ProcessStep.Retexturing)
+        else if (action.Step == ProcessStep.Retexturing)
         {
             await FolderDataService.ProcessRetexturingDelete(action.Name);
             dispatcher.Dispatch(new DeleteProcessSuccessAction(action.Name));
+        }
+        else if (action.Step == ProcessStep.Maya)
+        {
+          await FolderDataService.ProcessMayaDelete(action.Name);
+          dispatcher.Dispatch(new DeleteProcessSuccessAction(action.Name));
+        }
+        else if (action.Step == ProcessStep.Unity)
+        {
+          await FolderDataService.ProcessUnityDelete(action.Name);
+          dispatcher.Dispatch(new DeleteProcessSuccessAction(action.Name));
         }
       }
       catch (Exception e)

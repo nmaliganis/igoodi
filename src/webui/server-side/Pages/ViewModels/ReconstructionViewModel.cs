@@ -12,8 +12,10 @@ using igoodi.receiver360.webui.Models.DTOs.Folders;
 using igoodi.receiver360.webui.Models.DTOs.Processes;
 using igoodi.receiver360.webui.Slack;
 using igoodi.receiver360.webui.Store.Folders;
+using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Maya;
 using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Reconstruction;
 using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Retexturing;
+using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Unity;
 using igoodi.receiver360.webui.Store.Process;
 using igoodi.receiver360.webui.Store.Process.Actions.CreateProcess;
 using igoodi.receiver360.webui.Store.Process.Actions.DeleteProcess;
@@ -41,6 +43,8 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
     {
       Dispatcher.Dispatch(new FetchReconstructionFolderListAction());
       Dispatcher.Dispatch(new FetchRetexturingFolderListAction());
+      Dispatcher.Dispatch(new FetchMayaFolderListAction());
+      Dispatcher.Dispatch(new FetchUnityFolderListAction());
       Dispatcher.Dispatch(new FetchReconstructionFailureFolderListAction());
       IgoodiReceiverInboundServer.GetIgoodiReceiverInboundServer.Attach((IScannedDetectionActionListener) this);
       IgoodiReceiverInboundServer.GetIgoodiReceiverInboundServer.Attach((ICheckProcessingActionListener) this);
@@ -93,6 +97,9 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
     public void Update(object sender, ScannedDetectionEventArgs e)
     {
       Dispatcher.Dispatch(new FetchReconstructionFolderListAction());
+      Dispatcher.Dispatch(new FetchRetexturingFolderListAction());
+      Dispatcher.Dispatch(new FetchMayaFolderListAction());
+      Dispatcher.Dispatch(new FetchUnityFolderListAction());
       Dispatcher.Dispatch(new FetchReconstructionFailureFolderListAction());
 
       var slackValue = Configuration.GetSection($"{Configuration["env"]}:slack")
@@ -103,6 +110,8 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
 
     public void Update(object sender, CheckProcessingEventArgs e)
     {
+      #region Reconstruction
+
       List<string> reconstructions = new List<string>();
       foreach (var reconstructionFolder in FolderState.Value.ReconstructionFolderList)
       {
@@ -118,6 +127,10 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
         Dispatcher.Dispatch(new DeleteProcessAction(reconstruction, ProcessStep.Reconstruction));
       }
 
+      #endregion
+
+      #region Retexturing
+
       List<string> retexturings = new List<string>();
       foreach (var retexturingFolderList in FolderState.Value.RetexturingFolderList)
       {
@@ -132,6 +145,46 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
         Thread.Sleep(10);
         Dispatcher.Dispatch(new DeleteProcessAction(retexturing, ProcessStep.Retexturing));
       }
+
+      #endregion
+
+      #region Maya
+
+      List<string> mayas = new List<string>();
+      foreach (var mayaFolderList in FolderState.Value.MayaFolderList)
+      {
+        Thread.Sleep(20);
+        Dispatcher.Dispatch(action: new CreateProcessAction(mayaFolderList.Name, ProcessStep.Maya,
+          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+        mayas.Add(mayaFolderList.Name);
+      }
+
+      foreach (var maya in mayas)
+      {
+        Thread.Sleep(10);
+        Dispatcher.Dispatch(new DeleteProcessAction(maya, ProcessStep.Maya));
+      }
+
+      #endregion
+
+      #region Unity
+
+      List<string> unities = new List<string>();
+      foreach (var unityFolderList in FolderState.Value.UnityFolderList)
+      {
+        Thread.Sleep(20);
+        Dispatcher.Dispatch(action: new CreateProcessAction(unityFolderList.Name, ProcessStep.Unity,
+          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+        unities.Add(unityFolderList.Name);
+      }
+
+      foreach (var unity in unities)
+      {
+        Thread.Sleep(10);
+        Dispatcher.Dispatch(new DeleteProcessAction(unity, ProcessStep.Unity));
+      }
+
+      #endregion
     }
 
     public void Update(object sender, CheckFailureProcessingEventArgs e)

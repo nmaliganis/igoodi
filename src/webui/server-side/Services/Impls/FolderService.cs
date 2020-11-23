@@ -234,6 +234,70 @@ namespace igoodi.receiver360.webui.Services.Impls
       return returnValue;
     }
 
+    public async Task<List<FolderDto>> GetMayaFolderList()
+    {
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+
+      Log.Information(
+        $"GetFolderList:" +
+        "--FolderService--  @AboutComplete@ Message: Just Before GetFolderList");
+
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
+        .Value;
+
+      var returnValue = OkFiles(folderPath, files, ProcessStep.Maya);
+
+      return returnValue;
+    }
+
+    public async Task<List<FolderDto>> GetMayaFailedFolderList()
+    {
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+
+      Log.Information(
+        $"GetFolderList:" +
+        "--FolderService--  @AboutComplete@ Message: Just Before GetFolderList");
+
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
+        .Value;
+
+      var returnValue = FailedFiles(folderPath, files, ProcessStep.Maya);
+
+      return returnValue;
+    }
+
+    public async Task<List<FolderDto>> GetUnityFolderList()
+    {
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+
+      Log.Information(
+        $"GetFolderList:" +
+        "--FolderService--  @AboutComplete@ Message: Just Before GetFolderList");
+
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
+        .Value;
+
+      var returnValue = OkFiles(folderPath, files, ProcessStep.Unity);
+
+      return returnValue;
+    }
+
+    public async Task<List<FolderDto>> GetUnityFailedFolderList()
+    {
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+
+      Log.Information(
+        $"GetFolderList:" +
+        "--FolderService--  @AboutComplete@ Message: Just Before GetFolderList");
+
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
+        .Value;
+
+      var returnValue = FailedFiles(folderPath, files, ProcessStep.Unity);
+
+      return returnValue;
+    }
+
     public Task<FolderDto> GetFolder(string name)
     {
       return null;
@@ -292,19 +356,19 @@ namespace igoodi.receiver360.webui.Services.Impls
       var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_path")
         .Value +"\\" + destination;
 
-      var reconstructionInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
+      var retexturingInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
       int bothFiles = 0;
-      foreach (var reconstructionInputFile in reconstructionInputFiles)
+      foreach (var retexturingInputFile in retexturingInputFiles)
       {
         string file = String.Empty;
-        if (reconstructionInputFile.Contains(name))
+        if (retexturingInputFile.Contains(name))
         {
           try
           {
-            int lastPosition = reconstructionInputFile.LastIndexOf('\\');
-            file = reconstructionInputFile.Substring(lastPosition + 1);
+            int lastPosition = retexturingInputFile.LastIndexOf('\\');
+            file = retexturingInputFile.Substring(lastPosition + 1);
 
-            File.Copy(reconstructionInputFile, destFile + "\\" + file, true);
+            File.Copy(retexturingInputFile, destFile + "\\" + file, true);
           }
           catch (Exception ex)
           {
@@ -318,10 +382,100 @@ namespace igoodi.receiver360.webui.Services.Impls
         {
           return await Task.Run(() => new ProcessDto()
           {
-            Path = reconstructionInputFile,
+            Path = retexturingInputFile,
             Name = file,
             Process = Int32.Parse(destination),
             Step = ProcessStep.Retexturing.ToString()
+          });
+        }
+      }
+
+      return null;
+    }
+
+    public async Task<ProcessDto> ProcessMayaScanFolder(string name, string destination)
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
+        .Value;
+
+      var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_path")
+        .Value +"\\" + destination;
+
+      var mayaInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
+      int bothFiles = 0;
+      foreach (var mayaInputFile in mayaInputFiles)
+      {
+        string file = String.Empty;
+        if (mayaInputFile.Contains(name))
+        {
+          try
+          {
+            int lastPosition = mayaInputFile.LastIndexOf('\\');
+            file = mayaInputFile.Substring(lastPosition + 1);
+
+            File.Copy(mayaInputFile, destFile + "\\" + file, true);
+          }
+          catch (Exception ex)
+          {
+            //Todo: Log ex
+            return null;
+          }
+          bothFiles++;
+        }
+
+        if (bothFiles == 2)
+        {
+          return await Task.Run(() => new ProcessDto()
+          {
+            Path = mayaInputFile,
+            Name = file,
+            Process = Int32.Parse(destination),
+            Step = ProcessStep.Maya.ToString()
+          });
+        }
+      }
+
+      return null;
+    }
+
+    public async Task<ProcessDto> ProcessUnityScanFolder(string name, string destination)
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
+        .Value;
+
+      var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_path")
+        .Value +"\\" + destination;
+
+      var unityInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
+      int bothFiles = 0;
+      foreach (var unityInputFile in unityInputFiles)
+      {
+        string file = String.Empty;
+        if (unityInputFile.Contains(name))
+        {
+          try
+          {
+            int lastPosition = unityInputFile.LastIndexOf('\\');
+            file = unityInputFile.Substring(lastPosition + 1);
+
+            File.Copy(unityInputFile, destFile + "\\" + file, true);
+          }
+          catch (Exception ex)
+          {
+            //Todo: Log ex
+            return null;
+          }
+          bothFiles++;
+        }
+
+        if (bothFiles == 2)
+        {
+          return await Task.Run(() => new ProcessDto()
+          {
+            Path = unityInputFile,
+            Name = file,
+            Process = Int32.Parse(destination),
+            Step = ProcessStep.Unity.ToString()
           });
         }
       }
@@ -371,6 +525,60 @@ namespace igoodi.receiver360.webui.Services.Impls
             file = reconstructionInputFile.Substring(lastPosition + 1);
 
             File.Delete(reconstructionInputFile);
+          }
+          catch (Exception ex)
+          {
+            //Todo
+          }
+        }
+      }
+    }
+
+    public async Task ProcessMayaDelete(string name)
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
+        .Value;
+
+      var mayaInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
+      
+      foreach (var mayaInputFile in mayaInputFiles)
+      {
+        string file = String.Empty;
+        if (mayaInputFile.Contains(name))
+        {
+          try
+          {
+            int lastPosition = mayaInputFile.LastIndexOf('\\');
+            file = mayaInputFile.Substring(lastPosition + 1);
+
+            File.Delete(mayaInputFile);
+          }
+          catch (Exception ex)
+          {
+            //Todo
+          }
+        }
+      }
+    }
+
+    public async Task ProcessUnityDelete(string name)
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
+        .Value;
+
+      var unityInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
+      
+      foreach (var unityInputFile in unityInputFiles)
+      {
+        string file = String.Empty;
+        if (unityInputFile.Contains(name))
+        {
+          try
+          {
+            int lastPosition = unityInputFile.LastIndexOf('\\');
+            file = unityInputFile.Substring(lastPosition + 1);
+
+            File.Delete(unityInputFile);
           }
           catch (Exception ex)
           {
@@ -439,6 +647,76 @@ namespace igoodi.receiver360.webui.Services.Impls
 
       //2
       returnValue = FailedFiles(folderPath + "\\2", files, ProcessStep.Reconstruction);
+
+      foreach (var t in returnValue)
+      {
+        filesToBeMoved = files[t.Name];
+        foreach (var fileToBeMoved in filesToBeMoved)
+        {
+          File.Move(folderPath + "\\2" + "\\" + fileToBeMoved, folderInputPath + "\\" + fileToBeMoved, true);
+        }
+      }
+    }
+
+    public async Task ProcessMayaFailed()
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_path")
+        .Value;     
+      
+      var folderInputPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
+        .Value;
+      //1
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+      var returnValue = FailedFiles(folderPath + "\\1", files, ProcessStep.Maya);
+
+      List<string> filesToBeMoved;
+
+      foreach (var t in returnValue)
+      {
+        filesToBeMoved = files[t.Name];
+        foreach (var fileToBeMoved in filesToBeMoved)
+        {
+          File.Move(folderPath + "\\1" + "\\" + fileToBeMoved, folderInputPath + "\\" + fileToBeMoved, true);
+        }
+      }
+
+      //2
+      returnValue = FailedFiles(folderPath + "\\2", files, ProcessStep.Maya);
+
+      foreach (var t in returnValue)
+      {
+        filesToBeMoved = files[t.Name];
+        foreach (var fileToBeMoved in filesToBeMoved)
+        {
+          File.Move(folderPath + "\\2" + "\\" + fileToBeMoved, folderInputPath + "\\" + fileToBeMoved, true);
+        }
+      }
+    }
+
+    public async Task ProcessUnityFailed()
+    {
+      var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_path")
+        .Value;     
+      
+      var folderInputPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
+        .Value;
+      //1
+      IDictionary<string, List<string>> files = new Dictionary<string, List<string>>();
+      var returnValue = FailedFiles(folderPath + "\\1", files, ProcessStep.Unity);
+
+      List<string> filesToBeMoved;
+
+      foreach (var t in returnValue)
+      {
+        filesToBeMoved = files[t.Name];
+        foreach (var fileToBeMoved in filesToBeMoved)
+        {
+          File.Move(folderPath + "\\1" + "\\" + fileToBeMoved, folderInputPath + "\\" + fileToBeMoved, true);
+        }
+      }
+
+      //2
+      returnValue = FailedFiles(folderPath + "\\2", files, ProcessStep.Unity);
 
       foreach (var t in returnValue)
       {

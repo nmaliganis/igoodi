@@ -11,8 +11,10 @@ using igoodi.receiver360.webui.Commanding.Servers;
 using igoodi.receiver360.webui.Models.DTOs.Processes;
 using igoodi.receiver360.webui.Slack;
 using igoodi.receiver360.webui.Store.Folders;
+using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Maya;
 using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Reconstruction;
 using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Retexturing;
+using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Unity;
 using igoodi.receiver360.webui.Store.Process;
 using igoodi.receiver360.webui.Store.Process.Actions.CreateProcess;
 using igoodi.receiver360.webui.Store.Process.Actions.DeleteProcess;
@@ -91,6 +93,8 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
     {
       Dispatcher.Dispatch(new FetchReconstructionFolderListAction());
       Dispatcher.Dispatch(new FetchRetexturingFolderListAction());
+      Dispatcher.Dispatch(new FetchMayaFolderListAction());
+      Dispatcher.Dispatch(new FetchUnityFolderListAction());
       Dispatcher.Dispatch(new FetchReconstructionFailureFolderListAction());
 
       var slackValue = Configuration.GetSection($"{Configuration["env"]}:slack")

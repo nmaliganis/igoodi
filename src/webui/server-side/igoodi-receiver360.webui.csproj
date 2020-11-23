@@ -13,6 +13,8 @@
     <None Remove="Pages\Videos.razor~RFac99332.TMP" />
     <None Remove="Services\Contracts\IIGoodiService.cs~RF96867e1.TMP" />
     <None Remove="Store\Folders\Actions\FetchAllFolders\FetchFolderListSuccessAction.cs~RF78c28d.TMP" />
+    <None Remove="Store\Folders\Actions\FetchAllFolders\Maya\FetchMayaFailuresFolderListSuccessAction.cs~RFdf8ae4f.TMP" />
+    <None Remove="Store\Folders\Actions\FetchAllFolders\Unity\FetchUnityFailuresFolderListSuccessAction.cs~RFdfa18cc.TMP" />
     <None Remove="Store\Folders\FolderFeature.cs~RF772d95.TMP" />
   </ItemGroup>
 

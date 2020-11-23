@@ -45,3 +45,5 @@ src/cms/adme360-cms.services/obj/
 src/cms/adme360-cms.model/obj/
 
 src/cms/adme360-cms.model/bin/
+/src/webui/server-side/Logs
+src/common/igoodi-receiver360-common.infrastructure.cognito.users/obj

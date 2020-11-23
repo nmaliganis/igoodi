@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Fluxor;
-using igoodi.receiver360.webui.Models.DTOs.Processes;
 using igoodi.receiver360.webui.Services.Contracts;
-using igoodi.receiver360.webui.Store.Process.Actions.DeleteProcess;
 using igoodi.receiver360.webui.Store.Process.Actions.MoveProcess;
 
 namespace igoodi.receiver360.webui.Store.Process.Effects.MoveProcess
@@ -23,6 +21,8 @@ namespace igoodi.receiver360.webui.Store.Process.Effects.MoveProcess
       {
         await FolderDataService.ProcessReconstructionFailed();
         await FolderDataService.ProcessRetexturingFailed();
+        await FolderDataService.ProcessMayaFailed();
+        await FolderDataService.ProcessUnityFailed();
         dispatcher.Dispatch(new MoveProcessSuccessAction());
       }
       catch (Exception e)

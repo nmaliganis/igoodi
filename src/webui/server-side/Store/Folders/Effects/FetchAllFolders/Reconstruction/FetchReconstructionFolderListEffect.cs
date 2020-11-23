@@ -7,7 +7,7 @@ using igoodi.receiver360.webui.Store.Folders.Actions.FetchAllFolders.Reconstruct
 
 namespace igoodi.receiver360.webui.Store.Folders.Effects.FetchAllFolders.Reconstruction
 {
-  public class FetchReconstructionFolderListEffect : Effect<FetchReconstructionFailureFolderListAction>
+  public class FetchReconstructionFolderListEffect : Effect<FetchReconstructionFolderListAction>
   {
     public IFolderService FolderDataService { get; set; }
     public FetchReconstructionFolderListEffect(IFolderService folderDataService)
@@ -15,7 +15,7 @@ namespace igoodi.receiver360.webui.Store.Folders.Effects.FetchAllFolders.Reconst
       FolderDataService = folderDataService;
     }
 
-    protected override async Task HandleAsync(FetchReconstructionFailureFolderListAction action, IDispatcher dispatcher)
+    protected override async Task HandleAsync(FetchReconstructionFolderListAction action, IDispatcher dispatcher)
     {
       try
       {

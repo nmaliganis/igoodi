@@ -9,6 +9,7 @@ namespace igoodi.receiver360.webui.Models.DTOs.Processes
   {
     Reconstruction = 1,
     Retexturing,
-    Maya
+    Maya,
+    Unity
   }
 }
