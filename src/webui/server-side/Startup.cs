@@ -74,18 +74,18 @@ namespace igoodi.receiver360.webui
 
           services.AddSingleton(new JobSchedule(
             jobType: typeof(CheckIncomingInitializerJob),
-            cronExpression: "0/30 * * * * ?")); // run every 30 seconds
+            cronExpression: "0/5 * * * * ?")); // run every 30 seconds
 
           services.AddSingleton(new JobSchedule(
             jobType: typeof(CheckProcessFailuresInitializerJob),
-            cronExpression: "0/20 * * * * ?")); // run every 20 seconds
+            cronExpression: "0/10 * * * * ?")); // run every 20 seconds
             //cronExpression: "30 0/1 * * * ?")); //(i.e. 10:00:30 am, 10:01:30 am, etc.).
 
 
           services.AddSingleton(new JobSchedule(
             jobType: typeof(CheckProcessInitializerJob),
-            //cronExpression: "0/20 * * * * ?")); // run every 20 seconds
-            cronExpression: "15 0/1 * * * ?")); //(i.e. 10:00:15 am, 10:01:15 am, etc.).
+            cronExpression: "0/5 * * * * ?")); // run every 20 seconds
+            //cronExpression: "15 0/1 * * * ?")); //(i.e. 10:00:15 am, 10:01:15 am, etc.).
 
           //services.AddSingleton(new JobSchedule(
           //  jobType: typeof(EstablishCognitoInitializerJob),

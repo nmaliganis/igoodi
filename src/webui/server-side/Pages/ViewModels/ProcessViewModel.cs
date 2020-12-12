@@ -110,7 +110,7 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       {
         Thread.Sleep(20);
         Dispatcher.Dispatch(action: new CreateProcessAction(reconstructionFolder.Name, ProcessStep.Reconstruction,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.CrRecoLastProcess, ProcessState.Value.ProcessList));
         reconstructions.Add(reconstructionFolder.Name);
       }
 
@@ -125,7 +125,7 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       {
         Thread.Sleep(20);
         Dispatcher.Dispatch(action: new CreateProcessAction(retexturingFolderList.Name, ProcessStep.Retexturing,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.CrTextLastProcess, ProcessState.Value.ProcessList));
         retexturings.Add(retexturingFolderList.Name);
       }
 

@@ -26,10 +26,12 @@ namespace igoodi.receiver360.webui.Services.Contracts
     Task<ProcessDto> ProcessMayaScanFolder(string name, string destination);
     Task<ProcessDto> ProcessUnityScanFolder(string name, string destination);
 
-    Task ProcessReconstructionDelete(string name);
-    Task ProcessRetexturingDelete(string name);
-    Task ProcessMayaDelete(string name);
-    Task ProcessUnityDelete(string name);
+    Task CreateFolders(int processors, string folderReconstruction);
+
+    Task<bool> ProcessReconstructionDelete(string name);
+    Task<bool> ProcessRetexturingDelete(string name);
+    Task<bool>ProcessMayaDelete(string name);
+    Task<bool> ProcessUnityDelete(string name);
 
     Task ProcessReconstructionFailed();
     Task ProcessRetexturingFailed();

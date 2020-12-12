@@ -3,22 +3,24 @@ using igoodi.receiver360.webui.Store.Process.Actions.CreateProcess;
 
 namespace igoodi.receiver360.webui.Store.Process.Reducers
 {
-  public class CreateProcessReducerSucceededActionReducer : Reducer<ProcessState, CreateProcessSuccessAction>
+  public class UnitySucceededActionReducer : Reducer<ProcessState, UnitySuccessAction>
   {
-    public override ProcessState Reduce(ProcessState state, CreateProcessSuccessAction action)
+    public override ProcessState Reduce(ProcessState state, UnitySuccessAction action)
     {
       var newProcessList = state.ProcessList;
       newProcessList.Add(action.Process);
-      //int newLastProcess = 0;
 
-      //if (state.LastProcess < state.MaxProcess)
-      //{
-      //  newLastProcess = state.LastProcess + 1;
-      //}
-      //else
-      //{
-      //  newLastProcess = 1;
-      //}
+      int newLastProcess = 0;
+
+      if (state.CrTextLastProcess < action.UnityMax)
+      {
+        newLastProcess = state.CrTextLastProcess + 1;
+      }
+      else
+      {
+        newLastProcess = 1;
+      }
+
       //Todo
       return new ProcessState(
         newProcessList,
@@ -30,8 +32,8 @@ namespace igoodi.receiver360.webui.Store.Process.Reducers
         state.CrTextMaxProcess,
         state.MayaLastProcess,
         state.MayaMaxProcess,
-        state.UnityLastProcess,
-        state.UnityMaxProcess
+        newLastProcess,
+        action.UnityMax
       );
     }
   }

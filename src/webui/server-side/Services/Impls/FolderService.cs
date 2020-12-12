@@ -305,11 +305,24 @@ namespace igoodi.receiver360.webui.Services.Impls
 
     public async Task<ProcessDto> ProcessReconstructionScanFolder(string name, string destination)
     {
+      var folderReconstruction = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:reconstruction_path")
+        .Value;
+
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:reconstruction_input_path")
         .Value;
 
+      int processors = Int32.Parse(Configuration.GetSection($"{Configuration["env"]}:processors:cr").Value);
+
+      await CreateFolders(processors, folderReconstruction);
+
       var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:reconstruction_path")
         .Value +"\\" + destination;
+
+      //Todo:
+      var reconstructionDestinationFilesFiles = Directory.GetFiles(destFile, "*.*", SearchOption.TopDirectoryOnly);
+
+      if (reconstructionDestinationFilesFiles.Length >= 4)
+        return null;
 
       var reconstructionInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
       int bothFiles = 0;
@@ -348,13 +361,43 @@ namespace igoodi.receiver360.webui.Services.Impls
       return null;
     }
 
+    public async Task CreateFolders(int processors, string folderReconstruction)
+    {
+      for (int i = 1; i <= processors; i++)
+      {
+        try
+        {
+          if (!Directory.Exists(folderReconstruction + "\\" + i))
+          {
+            DirectoryInfo di = Directory.CreateDirectory(folderReconstruction + "\\" + i);
+          }
+        }
+        catch (Exception e)
+        {
+          //Todo
+        }
+      }
+    }
+
     public async Task<ProcessDto> ProcessRetexturingScanFolder(string name, string destination)
     {
+      var folderRetexturing = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_path")
+        .Value;
+
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_input_path")
         .Value;
 
+      int processors = Int32.Parse(Configuration.GetSection($"{Configuration["env"]}:processors:cr").Value);
+
+      await CreateFolders(processors, folderRetexturing);
+
       var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_path")
         .Value +"\\" + destination;
+
+      var retexturingDestinationFiles = Directory.GetFiles(destFile, "*.*", SearchOption.TopDirectoryOnly);
+
+      if (retexturingDestinationFiles.Length >= 4)
+        return null;
 
       var retexturingInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
       int bothFiles = 0;
@@ -401,6 +444,11 @@ namespace igoodi.receiver360.webui.Services.Impls
       var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_path")
         .Value +"\\" + destination;
 
+      var mayaDestinationFiles = Directory.GetFiles(destFile, "*.*", SearchOption.TopDirectoryOnly);
+
+      if (mayaDestinationFiles.Length >= 4)
+        return null;
+
       var mayaInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
       int bothFiles = 0;
       foreach (var mayaInputFile in mayaInputFiles)
@@ -446,6 +494,11 @@ namespace igoodi.receiver360.webui.Services.Impls
       var destFile = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_path")
         .Value +"\\" + destination;
 
+      var unityDestinationFiles = Directory.GetFiles(destFile, "*.*", SearchOption.TopDirectoryOnly);
+
+      if (unityDestinationFiles.Length >= 4)
+        return null;
+
       var unityInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
       int bothFiles = 0;
       foreach (var unityInputFile in unityInputFiles)
@@ -483,13 +536,12 @@ namespace igoodi.receiver360.webui.Services.Impls
       return null;
     }
 
-    public async Task ProcessReconstructionDelete(string name)
+    public async Task<bool> ProcessReconstructionDelete(string name)
     {
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:reconstruction_input_path")
         .Value;
 
       var reconstructionInputFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.TopDirectoryOnly);
-      
       foreach (var reconstructionInputFile in reconstructionInputFiles)
       {
         string file = String.Empty;
@@ -502,12 +554,15 @@ namespace igoodi.receiver360.webui.Services.Impls
           catch (Exception ex)
           {
             //Todo
+            return false;
           }
         }
       }
+
+      return true;
     }
 
-    public async Task ProcessRetexturingDelete(string name)
+    public async Task<bool> ProcessRetexturingDelete(string name)
     {
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_input_path")
         .Value;
@@ -521,20 +576,19 @@ namespace igoodi.receiver360.webui.Services.Impls
         {
           try
           {
-            int lastPosition = reconstructionInputFile.LastIndexOf('\\');
-            file = reconstructionInputFile.Substring(lastPosition + 1);
-
             File.Delete(reconstructionInputFile);
           }
           catch (Exception ex)
           {
             //Todo
+            return false;
           }
         }
       }
+      return true;
     }
 
-    public async Task ProcessMayaDelete(string name)
+    public async Task<bool> ProcessMayaDelete(string name)
     {
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:maya_input_path")
         .Value;
@@ -548,20 +602,19 @@ namespace igoodi.receiver360.webui.Services.Impls
         {
           try
           {
-            int lastPosition = mayaInputFile.LastIndexOf('\\');
-            file = mayaInputFile.Substring(lastPosition + 1);
-
             File.Delete(mayaInputFile);
           }
           catch (Exception ex)
           {
             //Todo
+            return false;
           }
         }
       }
+      return true;
     }
 
-    public async Task ProcessUnityDelete(string name)
+    public async Task<bool> ProcessUnityDelete(string name)
     {
       var folderPath = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_input_path")
         .Value;
@@ -575,17 +628,16 @@ namespace igoodi.receiver360.webui.Services.Impls
         {
           try
           {
-            int lastPosition = unityInputFile.LastIndexOf('\\');
-            file = unityInputFile.Substring(lastPosition + 1);
-
             File.Delete(unityInputFile);
           }
           catch (Exception ex)
           {
             //Todo
+            return false;
           }
         }
       }
+      return true;
     }
 
     public async Task ProcessReconstructionFailed()

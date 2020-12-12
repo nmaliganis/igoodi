@@ -115,17 +115,14 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       List<string> reconstructions = new List<string>();
       foreach (var reconstructionFolder in FolderState.Value.ReconstructionFolderList)
       {
-        Thread.Sleep(20);
+        Thread.Sleep(40);
         Dispatcher.Dispatch(action: new CreateProcessAction(reconstructionFolder.Name, ProcessStep.Reconstruction,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.CrRecoLastProcess, ProcessState.Value.ProcessList));
         reconstructions.Add(reconstructionFolder.Name);
+        Thread.Sleep(40);
       }
 
-      foreach (var reconstruction in reconstructions)
-      {
-        Thread.Sleep(10);
-        Dispatcher.Dispatch(new DeleteProcessAction(reconstruction, ProcessStep.Reconstruction));
-      }
+      Dispatcher.Dispatch(new DeleteProcessAction("", ProcessStep.Reconstruction));
 
       #endregion
 
@@ -136,15 +133,11 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       {
         Thread.Sleep(20);
         Dispatcher.Dispatch(action: new CreateProcessAction(retexturingFolderList.Name, ProcessStep.Retexturing,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.CrTextLastProcess, ProcessState.Value.ProcessList));
         retexturings.Add(retexturingFolderList.Name);
       }
 
-      foreach (var retexturing in retexturings)
-      {
-        Thread.Sleep(10);
-        Dispatcher.Dispatch(new DeleteProcessAction(retexturing, ProcessStep.Retexturing));
-      }
+      Dispatcher.Dispatch(new DeleteProcessAction("", ProcessStep.Retexturing));
 
       #endregion
 
@@ -155,15 +148,11 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       {
         Thread.Sleep(20);
         Dispatcher.Dispatch(action: new CreateProcessAction(mayaFolderList.Name, ProcessStep.Maya,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.MayaLastProcess, ProcessState.Value.ProcessList));
         mayas.Add(mayaFolderList.Name);
       }
 
-      foreach (var maya in mayas)
-      {
-        Thread.Sleep(10);
-        Dispatcher.Dispatch(new DeleteProcessAction(maya, ProcessStep.Maya));
-      }
+      Dispatcher.Dispatch(new DeleteProcessAction("", ProcessStep.Maya));
 
       #endregion
 
@@ -174,15 +163,11 @@ namespace igoodi.receiver360.webui.Pages.ViewModels
       {
         Thread.Sleep(20);
         Dispatcher.Dispatch(action: new CreateProcessAction(unityFolderList.Name, ProcessStep.Unity,
-          ProcessState.Value.LastProcess, ProcessState.Value.ProcessList));
+          ProcessState.Value.UnityLastProcess, ProcessState.Value.ProcessList));
         unities.Add(unityFolderList.Name);
       }
 
-      foreach (var unity in unities)
-      {
-        Thread.Sleep(10);
-        Dispatcher.Dispatch(new DeleteProcessAction(unity, ProcessStep.Unity));
-      }
+      Dispatcher.Dispatch(new DeleteProcessAction("", ProcessStep.Unity));
 
       #endregion
     }

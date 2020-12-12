@@ -9,10 +9,16 @@ namespace igoodi.receiver360.webui.Store.Process.Reducers
     {
       return new ProcessState(
         state.ProcessList,
-        state.LastProcess,
         action.ErrorMessage,
         state.IsLoading,
-        state.MaxProcess
+        state.CrRecoLastProcess,
+        state.CrRecoMaxProcess,
+        state.CrTextLastProcess,
+        state.CrTextMaxProcess,
+        state.MayaLastProcess,
+        state.MayaMaxProcess,
+        state.UnityLastProcess,
+        state.UnityMaxProcess
       );
     }
   }
