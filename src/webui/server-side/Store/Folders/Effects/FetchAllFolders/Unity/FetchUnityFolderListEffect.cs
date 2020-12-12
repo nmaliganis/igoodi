@@ -22,13 +22,14 @@ namespace igoodi.receiver360.webui.Store.Folders.Effects.FetchAllFolders.Unity
     {
       try
       {
-        var indexForText =
-          Int32.Parse(Configuration.GetSection($"{Configuration["env"]}:processors:cr").Value);
+        var indexForUnity =
+          Int32.Parse(Configuration.GetSection($"{Configuration["env"]}:processors:unity").Value);
 
-        var folderRetexturing = Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:retexturing_path")
+        var folderUnity= Configuration.GetSection($"{Configuration["env"]}:ProcessingPaths:unity_path")
           .Value;
 
-        await FolderDataService.CreateFolders(indexForText, folderRetexturing);
+        await FolderDataService.CreateFolders(indexForUnity, folderUnity);
+
         var folders = await FolderDataService.GetUnityFolderList();
         dispatcher.Dispatch(new FetchUnityFolderListSuccessAction(folders));
       }
