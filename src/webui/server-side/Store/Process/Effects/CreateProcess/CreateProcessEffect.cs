@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Fluxor;
 using igoodi.receiver360.webui.Models.DTOs.Processes;
 using igoodi.receiver360.webui.Services.Contracts;
 using igoodi.receiver360.webui.Store.Process.Actions.CreateProcess;
-using igoodi.receiver360.webui.Store.Process.Reducers;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Configuration;
 
 namespace igoodi.receiver360.webui.Store.Process.Effects.CreateProcess
