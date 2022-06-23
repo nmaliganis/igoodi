@@ -25,7 +25,7 @@
     <PackageReference Include="Fluxor.Blazor.Web" Version="3.8.0" />
     <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="3.8.0" />
     <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Quartz" Version="3.2.3" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
     <PackageReference Include="Serilog" Version="2.10.0" />
